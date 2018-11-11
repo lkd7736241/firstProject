@@ -9,5 +9,40 @@ public interface ApplicationFormDao {
 	 * @param id
 	 * @return
 	 */
-	ApplicationForm selectApplicationFormById(int id);
+	ApplicationForm selectApplicationFormById(long id);
+
+    /**
+     * 根据姓名查找
+     * @param name
+     * @return
+     */
+	ApplicationForm selectApplicationFormByName(String name);
+
+    /**
+     *
+     * @param qq
+     * @return
+     */
+	ApplicationForm selectApplicationFormByQQ(String qq);
+
+    /**
+     * 添加报名表
+     * @param applicationForm
+     * @return
+     */
+	long addForm(ApplicationForm applicationForm);
+
+    /**
+     * 根据ID删除
+     * @param applicationForm
+     * @return
+     */
+	int deleteForm(ApplicationForm applicationForm);
+
+    /**
+     * 根据ID更改
+     * @param applicationForm
+     * @return
+     */
+	int updateForm(ApplicationForm applicationForm);
 }

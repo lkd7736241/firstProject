@@ -3,7 +3,7 @@ package com.sun.bean;
 public class ApplicationForm {
 
 //	id	bigint	11	0	0	0	-1	0				id					0	0	0	0	-1	0	0
-	private int id;
+	private long id;
 //	name	varchar	20	0	-1	0	0	0				姓名			utf8	utf8_general_ci	0	0	0	0	0	0	0
 	private String name;
 //	qq	varchar	20	0	-1	0	0	0				qq号			utf8	utf8_general_ci	0	0	0	0	0	0	0
@@ -28,13 +28,16 @@ public class ApplicationForm {
 	private long createAt;
 //	update_at	bigint	6	0	-1	0	0	0				最后修改时间					0	0	0	0	0	0	0
 	private long updateAt;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
 		return name;
 	}
 	public void setName(String name) {

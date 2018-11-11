@@ -56,18 +56,18 @@
 
     <!-- 4.配置扫描Dao接口包，动态实现Dao接口，注入到spring容器中 -->
     <!-- mapper代理形式dao的配置 -->
-    <!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
-        <!--&lt;!&ndash; 注入sqlSessionFactory &ndash;&gt;-->
-        <!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>-->
-        <!--&lt;!&ndash; 给出需要扫描Dao接口包 &ndash;&gt;-->
-        <!--<property name="basePackage" value="com.sun.dao"/>-->
-    <!--</bean>-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!-- 注入sqlSessionFactory -->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <!-- 给出需要扫描Dao接口包 -->
+        <property name="basePackage" value="com.sun.dao"/>
+    </bean>
 
     <!-- 配置代理对象 -->
-    <bean id="applicationFormDao" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <!-- 设置代理的mapper接口，即为哪一个接口设置代理对象 -->
-        <property name="mapperInterface" value="com.sun.dao.ApplicationFormDao"/>
-        <!-- 注入sqlSessionFactory(MapperFactoryBean继承自SqlSessionDaoSupport) -->
-        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
-    </bean>
+    <!--<bean id="applicationFormDao" class="org.mybatis.spring.mapper.MapperFactoryBean">-->
+        <!--&lt;!&ndash; 设置代理的mapper接口，即为哪一个接口设置代理对象 &ndash;&gt;-->
+        <!--<property name="mapperInterface" value="com.sun.dao.ApplicationFormDao"/>-->
+        <!--&lt;!&ndash; 注入sqlSessionFactory(MapperFactoryBean继承自SqlSessionDaoSupport) &ndash;&gt;-->
+        <!--<property name="sqlSessionFactory" ref="sqlSessionFactory"/>-->
+    <!--</bean>-->
 </beans>
