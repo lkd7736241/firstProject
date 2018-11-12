@@ -6,6 +6,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
+ * 测试数据连接失败捕捉异常
  * create by qiulisun on 2018/11/12.<br>
  */
 public class ExceptionDealDemo {
@@ -19,7 +20,6 @@ public class ExceptionDealDemo {
             System.out.println(form.toString());
         } catch (Exception e){
             System.out.println("DB操作失败");
-//            e.printStackTrace();
         } finally {
             context.close();
         }

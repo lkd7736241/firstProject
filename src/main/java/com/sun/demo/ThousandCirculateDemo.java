@@ -6,6 +6,7 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
+ * 不释放线程池，测试1000次循环
  * create by qiulisun on 2018/11/12.<br>
  */
 public class ThousandCirculateDemo {
