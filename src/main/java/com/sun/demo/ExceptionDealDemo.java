@@ -19,7 +19,7 @@ public class ExceptionDealDemo {
             System.out.println(form.toString());
         } catch (Exception e){
             System.out.println("DB操作失败");
-            e.printStackTrace();
+//            e.printStackTrace();
         } finally {
             context.close();
         }
