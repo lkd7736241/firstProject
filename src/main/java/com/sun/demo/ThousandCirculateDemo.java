@@ -12,9 +12,9 @@ public class ThousandCirculateDemo {
 
     public static void main(String[] args){
 
-        AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-dao.xml");
-        ApplicationFormDao applicationFormDao = context.getBean(ApplicationFormDao.class);
         for (int i = 0; i < 1000; i++){
+            AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-dao.xml");
+            ApplicationFormDao applicationFormDao = context.getBean(ApplicationFormDao.class);
             ApplicationForm form = applicationFormDao.selectApplicationFormById(10L);
             System.out.println(form.toString() + "_" + i);
         }
