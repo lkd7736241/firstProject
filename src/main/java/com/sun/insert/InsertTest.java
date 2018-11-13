@@ -1,4 +1,4 @@
-package com.sun.Insert;
+package com.sun.insert;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
